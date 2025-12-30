@@ -3,606 +3,403 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haruka Kikuchi - Piano Studio</title>
-  <meta name="description" content="Haruka Kikuchi Piano Studio in Wezembeek-Oppem. Professional, personalized piano lessons for everyone. Trial lesson available." />
+  <title>Welcome to the World of Piano | Haruka Kikuchi</title>
+  <meta name="description" content="Bright, friendly piano lessons in Wezembeek-Oppem. Trial lesson available." />
 
   <style>
     :root{
-      --bg:#0b0c10;
-      --card:#12141b;
-      --text:#e9eef5;
-      --muted:#a9b3c3;
-      --line:#23283a;
-      --accent:#7aa2ff;
-      --accent2:#9dffb3;
-      --shadow: 0 18px 50px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1100px;
+      --bg:#fbfbff;
+      --card:#ffffff;
+      --text:#1b1b23;
+      --muted:#5b6072;
+      --line:#e7e8f2;
+
+      --pink:#ff4fa3;
+      --sky:#4aa3ff;
+      --mint:#2ee6a6;
+
+      --shadow: 0 14px 40px rgba(20,20,40,.08);
+      --radius:22px;
+      --max:1100px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
-        radial-gradient(1000px 600px at 10% 10%, rgba(122,162,255,.18), transparent 60%),
-        radial-gradient(900px 500px at 90% 15%, rgba(157,255,179,.10), transparent 55%),
-        radial-gradient(700px 400px at 70% 85%, rgba(122,162,255,.10), transparent 60%),
+        radial-gradient(800px 520px at 10% 5%, rgba(255,79,163,.10), transparent 55%),
+        radial-gradient(900px 520px at 92% 10%, rgba(74,163,255,.10), transparent 55%),
+        radial-gradient(800px 520px at 60% 92%, rgba(46,230,166,.10), transparent 55%),
         var(--bg);
       line-height:1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
 
     header{
-      position:sticky; top:0; z-index:50;
+      position:sticky;top:0;z-index:10;
+      background:rgba(251,251,255,.82);
       backdrop-filter: blur(10px);
-      background: rgba(11,12,16,.55);
-      border-bottom:1px solid rgba(35,40,58,.6);
+      border-bottom:1px solid var(--line);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:12px;
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{
+      font-weight:900;
+      letter-spacing:.2px;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
-    .logo{
-      width:34px; height:34px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(122,162,255,.9), rgba(157,255,179,.65));
-      box-shadow: 0 10px 30px rgba(122,162,255,.18);
-    }
-
-    .menu{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .menu{display:flex;gap:14px}
     .menu a{
-      padding:8px 10px; border-radius:12px;
       color:var(--muted);
-      border:1px solid transparent;
+      padding:8px 10px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:14px;
     }
     .menu a:hover{
+      background:rgba(74,163,255,.10);
       color:var(--text);
-      border-color: rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
     }
 
-    main{padding:30px 0 70px}
-    section{padding:42px 0}
+    main{padding:28px 0 56px}
+    section{padding:28px 0}
 
-    .hero{
-      padding-top:34px;
-      display:grid; grid-template-columns: 1.15fr .85fr;
-      gap:22px; align-items:stretch;
-    }
-    .card{
-      background: rgba(18,20,27,.72);
-      border: 1px solid rgba(35,40,58,.9);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-left{padding:28px}
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      color:var(--muted);
-      font-weight:600; letter-spacing:.25px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(122,162,255,.12);
-    }
+    /* Type scale */
     h1{
-      margin:12px 0 10px;
-      font-size: clamp(32px, 3.6vw, 52px);
-      line-height:1.1;
-      letter-spacing:-.6px;
+      font-size:clamp(30px,5vw,46px);
+      margin:0 0 10px;
+      line-height:1.12;
+      letter-spacing:-.4px;
     }
-    .sub{
-      margin:0 0 18px;
-      color: var(--muted);
-      font-size: 16.5px;
-      max-width: 70ch;
+    h2{
+      font-size:clamp(20px,4vw,28px);
+      margin:0 0 14px;
+      line-height:1.2;
+      letter-spacing:-.2px;
+    }
+    p{margin:0;color:var(--muted); font-size:15px}
+    .small{font-size:13px;color:var(--muted)}
+    .label{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.2px;text-transform:uppercase}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
     }
 
-    .btns{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(255,79,163,.10);
+      border: 1px solid rgba(255,79,163,.18);
+      color:#b01261;
+      font-weight:900;
+      font-size:13px;
+      margin-bottom:10px;
+    }
+    .tag i{
+      width:10px;height:10px;border-radius:999px;display:inline-block;
+      background: linear-gradient(135deg, var(--pink), var(--sky));
+    }
+
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
-      color: var(--text);
-      font-weight:650;
-      letter-spacing:.2px;
-      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:16px;
+      font-weight:900;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 10px 22px rgba(20,20,40,.06);
     }
     .btn.primary{
-      border-color: rgba(122,162,255,.55);
-      background: linear-gradient(135deg, rgba(122,162,255,.25), rgba(18,20,27,.55));
+      background: linear-gradient(135deg, var(--pink), var(--sky));
+      color:#111;
+      border-color: rgba(255,79,163,.20);
     }
     .btn:hover{transform: translateY(-1px)}
     .btn:active{transform: translateY(0)}
 
-    .hero-right{
-      padding:22px;
-      display:flex; flex-direction:column; gap:12px;
+    /* Layout helpers */
+    .stack{display:grid;gap:12px}
+    .grid-2{
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap:18px;
+      align-items:start;
     }
-    .photo-card{
-      display:flex; gap:14px; align-items:center;
-      padding:16px;
-      border-radius: 16px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(11,12,16,.35);
-    }
-    .avatar{
-      width:64px; height:64px; border-radius:18px;
+
+    /* Profile photo */
+    .profile-photo{
+      width:200px;
+      height:200px;
+      border-radius:28px;
       object-fit:cover;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
+      border:1px solid var(--line);
+      box-shadow: 0 14px 30px rgba(20,20,40,.10);
     }
-    .stat{
-      padding:16px;
-      border-radius: 16px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(11,12,16,.35);
-    }
-    .stat b{display:block; font-size: 18px}
-    .stat span{color:var(--muted); font-size:14px}
-
-    .grid-3{
-      display:grid; grid-template-columns: repeat(3, 1fr);
-      gap:14px; margin-top:16px;
-    }
-    .mini{
-      padding:16px;
-      border-radius: 16px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
-    }
-    .mini h3{margin:0 0 6px; font-size:16px}
-    .mini p{margin:0; color:var(--muted); font-size:14px}
-
-    .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:12px; margin-bottom:14px;
-    }
-    .section-head h2{
+    .name{
+      font-weight:1000;
+      font-size:18px;
+      letter-spacing:-.2px;
       margin:0;
-      font-size: clamp(22px, 2.5vw, 30px);
-      letter-spacing:-.3px;
+      color:var(--text);
     }
-    .section-head p{margin:0; color:var(--muted); max-width:75ch}
-
-    .two{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    .pad{padding:22px}
-    .list{margin:12px 0 0; padding-left: 18px; color: var(--muted)}
-    .list li{margin:6px 0}
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:7px 10px;
-      border-radius: 999px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(11,12,16,.35);
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .badge i{
-      width:8px; height:8px; border-radius:999px; display:inline-block;
-      background: var(--accent2);
-      box-shadow: 0 0 0 6px rgba(157,255,179,.10);
+    .subtitle{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-weight:700;
+      font-size:14px;
     }
 
-    .price{
-      display:grid; gap:10px;
+    .list{
+      padding-left:18px;
+      margin:8px 0 0;
+    }
+    .list li{
+      margin:6px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* Pricing block inside Lessons */
+    .price-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:10px;
       margin-top:12px;
     }
-    .price-row{
-      display:flex; justify-content:space-between; gap:12px;
-      padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(11,12,16,.35);
+    .price-card{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+      background:#fff;
+      box-shadow: 0 10px 22px rgba(20,20,40,.05);
     }
-    .price-row span{color:var(--muted)}
-    .price-row b{font-size:16px}
+    .price-title{
+      font-weight:900;
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 4px;
+    }
+    .price-value{
+      font-weight:1000;
+      font-size:22px;
+      letter-spacing:-.3px;
+      margin:0;
+      color:var(--text);
+    }
+    .price-note{
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:700;
+    }
 
     footer{
-      border-top: 1px solid rgba(35,40,58,.7);
-      color: var(--muted);
-      padding: 22px 0;
+      border-top:1px solid var(--line);
+      padding:20px 0;
+      color:var(--muted);
+      font-size:14px;
+      background: rgba(255,255,255,.6);
     }
 
-    /* --- Hamburger menu --- */
+    /* hamburger */
     .hamburger{
       display:none;
-      width:44px; height:44px;
+      width:44px;height:44px;
       border-radius:14px;
-      border:1px solid rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
-      color: var(--text);
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:20px;
       cursor:pointer;
-      align-items:center;
-      justify-content:center;
     }
-    .hamburger:focus{ outline: 2px solid rgba(122,162,255,.55); outline-offset: 2px; }
-    .hamburger .lines{ width:18px; height:12px; position:relative; }
-    .hamburger .lines span{
-      position:absolute; left:0; right:0;
-      height:2px; border-radius: 999px;
-      background: rgba(233,238,245,.9);
-      transition: transform .2s ease, top .2s ease, opacity .2s ease;
-    }
-    .hamburger .lines span:nth-child(1){ top:0; }
-    .hamburger .lines span:nth-child(2){ top:5px; }
-    .hamburger .lines span:nth-child(3){ top:10px; }
-
-    body.nav-open .hamburger .lines span:nth-child(1){ top:5px; transform: rotate(45deg); }
-    body.nav-open .hamburger .lines span:nth-child(2){ opacity:0; }
-    body.nav-open .hamburger .lines span:nth-child(3){ top:5px; transform: rotate(-45deg); }
-
-    .mobile-nav{
-      display:none;
-      margin: 10px 0 14px;
-      padding: 10px;
-      border-radius: 16px;
-      border: 1px solid rgba(35,40,58,.9);
-      background: rgba(11,12,16,.55);
-    }
-    .mobile-nav a{
-      display:block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      color: var(--muted);
-      border: 1px solid transparent;
-    }
-    .mobile-nav a:hover{
-      color: var(--text);
-      border-color: rgba(35,40,58,.9);
-      background: rgba(18,20,27,.55);
+    .mobile{display:none}
+    .mobile a{
+      color:var(--muted);
+      display:inline-block;
+      padding:6px 0;
+      font-weight:800;
     }
 
-    @media (max-width: 900px){
-      .hero{grid-template-columns: 1fr}
-      .grid-3{grid-template-columns: 1fr}
-      .two{grid-template-columns: 1fr}
-      .menu{ display:none; }
-      .hamburger{ display:flex; }
-      body.nav-open .mobile-nav{ display:block; }
+    /* Mobile: tighter spacing + readable */
+    @media(max-width:900px){
+      .menu{display:none}
+      .hamburger{display:block}
+      body.open .mobile{display:block}
+
+      section{padding:22px 0}
+      .card{padding:18px}
+      p,.list li{font-size:14px}
+      .list li{margin:4px 0}
+
+      .grid-2{
+        grid-template-columns: 1fr;
+      }
+      .profile-photo{
+        width:220px;height:220px;
+      }
+
+      .price-grid{
+        grid-template-columns: 1fr;
+      }
+      .btn{padding:11px 14px}
     }
   </style>
 </head>
 
 <body>
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="#home" aria-label="Go to home">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div>Haruka Kikuchi</div>
-          <div style="font-size:12px; color:var(--muted); font-weight:600;">Piano Studio • Wezembeek-Oppem</div>
-        </div>
-      </a>
-
-      <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        <div class="lines" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-      </button>
-
-      <nav class="menu" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#lessons">Programs</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <div class="wrap nav">
+    <div class="brand">Haruka Kikuchi Piano</div>
+    <button class="hamburger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+    <nav class="menu" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#lessons">Programs</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#profile">Profile</a>
+      <a href="#lessons">Lessons</a>
       <a href="#contact">Contact</a>
-    </div>
+    </nav>
+  </div>
+
+  <div class="wrap mobile" aria-label="Mobile navigation">
+    <nav>
+      <a href="#home" onclick="document.body.classList.remove('open')">Home</a><br>
+      <a href="#profile" onclick="document.body.classList.remove('open')">Profile</a><br>
+      <a href="#lessons" onclick="document.body.classList.remove('open')">Lessons</a><br>
+      <a href="#contact" onclick="document.body.classList.remove('open')">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main class="wrap">
+
   <!-- HOME -->
   <section id="home" aria-label="Home">
-    <div class="hero">
-      <div class="card hero-left">
-        <div class="kicker"><span class="dot"></span> Piano lessons for everyone • Wezembeek-Oppem</div>
-        <h1>The World of Piano</h1>
-        <p class="sub">
-          Discover the beauty of music through the piano. Whether you are a complete beginner or looking to refine
-          your skills, I provide professional, personalized instruction that supports steady growth and joyful self-expression.
-        </p>
-
-        <div class="btns">
-          <a class="btn primary" href="#contact">Contact / Book a trial lesson</a>
-          <a class="btn" href="#lessons">Explore programs</a>
-        </div>
-
-        <div class="grid-3" aria-label="Highlights">
-          <div class="mini">
-            <h3>Personalized teaching</h3>
-            <p>Lessons are tailored to each student’s personality, pace, and goals.</p>
-          </div>
-          <div class="mini">
-            <h3>Professional guidance</h3>
-            <p>Solid technique, musicality, and clear practice strategies to progress confidently.</p>
-          </div>
-          <div class="mini">
-            <h3>Music as expression</h3>
-            <p>Enjoy the piano as a tool for creativity, growth, and self-expression.</p>
-          </div>
-        </div>
+    <div class="card">
+      <div class="tag"><i></i> Piano lessons in Wezembeek-Oppem</div>
+      <h1>Welcome to the World of Piano</h1>
+      <p>
+        Bright, friendly lessons for all ages.<br>
+        Learn at your own pace and enjoy music.
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Book a trial lesson</a>
+        <a class="btn" href="#lessons">See lessons & pricing</a>
       </div>
+    </div>
+  </section>
 
-      <div class="card hero-right" aria-label="Quick info">
-        <div class="photo-card" aria-label="Teacher photo">
-          <img class="avatar" src="profile.jpg" alt="Haruka Kikuchi" />
+  <!-- PROFILE (Left-aligned) -->
+  <section id="profile" aria-label="Profile">
+    <h2>Profile</h2>
+
+    <div class="card">
+      <div class="grid-2">
+        <div class="stack">
+          <img src="profile.jpg" alt="Haruka Kikuchi" class="profile-photo">
+          <p class="name">Haruka Kikuchi</p>
+          <p class="subtitle">Piano teacher • Wezembeek-Oppem</p>
+        </div>
+
+        <div class="stack">
           <div>
-            <b style="display:block; font-size:18px;">Haruka Kikuchi</b>
-            <span style="color:var(--muted); font-size:14px;">Piano teacher • Wezembeek-Oppem</span>
+            <div class="label">Education & Awards</div>
+            <ul class="list">
+              <li>Music Department, Hyogo Prefectural Nishinomiya High School (Japan)</li>
+              <li>School of Music, Kobe College (Japan)</li>
+              <li>5th Prize — 24th Great Wall Cup International Music Competition (General Division)</li>
+              <li>Teaching experience at a major music school in Japan</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="stat">
-          <b>Location</b>
-          <span>Wezembeek-Oppem</span>
-        </div>
-        <div class="stat">
-          <b>Students</b>
-          <span>Everyone (all ages and levels)</span>
-        </div>
-        <div class="stat">
-          <b>Trial lesson</b>
-          <span>60 minutes • €30</span>
-        </div>
-        <div class="stat">
-          <b>Lesson options</b>
-          <span>45 minutes • 60 minutes</span>
+          <p class="small">
+            I value each student’s individuality and support steady progress with a warm, practical approach.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" aria-label="About the studio">
-    <div class="section-head">
-      <div>
-        <h2>About the Studio</h2>
-        <p>A message from Haruka Kikuchi Piano Studio.</p>
-      </div>
-      <span class="badge"><i></i> Professional • Personal • Passionate</span>
-    </div>
+  <!-- LESSONS + PRICING -->
+  <section id="lessons" aria-label="Lessons">
+    <h2>Lessons</h2>
 
-    <div class="card pad">
-      <p style="margin:0; color:var(--muted); font-size:16px; max-width:90ch;">
-        Haruka Kikuchi Piano Studio is led by a professional in music education. I value each student’s individuality,
-        and my mission is to share the beauty of music through the piano. With passion and care, I support students
-        in growing alongside music and experiencing the joy of self-expression.
+    <div class="card">
+      <div class="label">Programs</div>
+      <ul class="list">
+        <li><b>Foundation</b> – basics, reading music, technique</li>
+        <li><b>Advanced</b> – expression, theory, performance skills</li>
+        <li><b>Special</b> – concerts, competitions, personal goals</li>
+        <li><b>Events</b> – recitals and studio concerts</li>
+        <li><b>Recording</b> – audio & video for progress tracking</li>
+      </ul>
+
+      <div style="margin-top:16px;">
+        <div class="label">Pricing</div>
+        <div class="price-grid" aria-label="Pricing">
+          <div class="price-card">
+            <p class="price-title">Trial lesson (60 min)</p>
+            <p class="price-value">€30</p>
+            <div class="price-note">For new students</div>
+          </div>
+
+          <div class="price-card">
+            <p class="price-title">Regular lesson (45 min)</p>
+            <p class="price-value">€70</p>
+            <div class="price-note">All ages & levels</div>
+          </div>
+
+          <div class="price-card">
+            <p class="price-title">Regular lesson (60 min)</p>
+            <p class="price-value">€100</p>
+            <div class="price-note">All ages & levels</div>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:10px;">
+          Fees are per lesson. Please contact me for scheduling availability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        For the best mobile experience, the form opens in a new tab.
+      </p>
+      <div class="btns">
+        <a class="btn primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSc674RQH5l7PoDbMe6OfhCGGxtASZ0_QuApAKlUy9XA1OfYnQ/viewform?usp=dialog"
+           target="_blank" rel="noopener">
+          Open contact form
+        </a>
+      </div>
+      <p class="small" style="margin-top:10px;">
+        Trial lesson: 60 minutes (€30)
       </p>
     </div>
   </section>
 
-  <!-- PROGRAMS -->
-  <section id="lessons" aria-label="Lesson programs">
-    <div class="section-head">
-      <div>
-        <h2>Lesson Programs</h2>
-        <p>Programs are designed to support steady growth—from fundamentals to advanced artistry and special goals.</p>
-      </div>
-      <span class="badge"><i></i> Customized learning</span>
-    </div>
-
-    <div class="two">
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Foundation Course</h3>
-        <p style="margin:0; color:var(--muted);">
-          Learn essential piano technique and how to read sheet music. With personalized, one-to-one guidance,
-          you will build a reliable foundation and improve steadily.
-        </p>
-        <ul class="list">
-          <li>Posture, hand shape, and healthy technique</li>
-          <li>Reading notes and rhythm with confidence</li>
-          <li>Step-by-step practice methods</li>
-        </ul>
-      </div>
-
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Advanced Course</h3>
-        <p style="margin:0; color:var(--muted);">
-          Develop higher-level performance skills and deepen your understanding of music theory.
-          Training focuses on musical interpretation and expressive playing.
-        </p>
-        <ul class="list">
-          <li>Advanced technique and tone control</li>
-          <li>Harmony, analysis, and musical structure</li>
-          <li>Expression, phrasing, and artistry</li>
-        </ul>
-      </div>
-
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Special Course</h3>
-        <p style="margin:0; color:var(--muted);">
-          A customized program based on your interests and goals. This may include preparing for concerts,
-          auditions, or music competitions—supporting a wide range of activities.
-        </p>
-        <ul class="list">
-          <li>Competition and recital preparation</li>
-          <li>Repertoire planning and performance coaching</li>
-          <li>Personal goal setting and pacing</li>
-        </ul>
-      </div>
-
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Events</h3>
-        <p style="margin:0; color:var(--muted);">
-          Students can join recitals, concerts, and studio events held regularly. Performing is a great way
-          to celebrate progress and enjoy music with others.
-        </p>
-        <ul class="list">
-          <li>Regular studio recitals</li>
-          <li>Concert opportunities</li>
-          <li>A supportive and motivating environment</li>
-        </ul>
-      </div>
-
-      <div class="card pad" style="grid-column: 1 / -1;">
-        <h3 style="margin:0 0 8px;">Recording & Video</h3>
-        <p style="margin:0; color:var(--muted); max-width:95ch;">
-          We can record audio and video of your performance to keep a personal growth archive.
-          Reviewing recordings helps you evaluate your playing objectively and find clear points to improve.
-        </p>
-        <ul class="list">
-          <li>Audio/video recording for progress tracking</li>
-          <li>Self-evaluation and improvement guidance</li>
-          <li>Optional performance portfolio support</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" aria-label="Pricing">
-    <div class="section-head">
-      <div>
-        <h2>Pricing</h2>
-        <p>Transparent lesson fees. Trial lesson is available for new students.</p>
-      </div>
-      <span class="badge"><i></i> Trial lesson available</span>
-    </div>
-
-    <div class="two">
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Lesson fees</h3>
-        <div class="price" aria-label="Price list">
-          <div class="price-row"><span>Trial lesson (60 min)</span><b>€30</b></div>
-          <div class="price-row"><span>Regular lesson (45 min)</span><b>€70</b></div>
-          <div class="price-row"><span>Regular lesson (60 min)</span><b>€100</b></div>
-        </div>
-        <p style="margin:12px 0 0; color:var(--muted); font-size:14px;">
-          Notes: Fees are per lesson. Please contact me for scheduling availability and details.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Who can join?</h3>
-        <ul class="list">
-          <li><b>Everyone</b> is welcome (all ages and levels)</li>
-          <li>Beginners, returning learners, and advanced students</li>
-          <li>Lessons designed around your goals and pace</li>
-        </ul>
-        <p style="margin:12px 0 0; color:var(--muted); font-size:14px;">
-          If you are not sure which program is best, the trial lesson is the fastest way to set a clear direction.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (URL redirect, mobile-friendly) -->
-  <section id="contact" aria-label="Contact">
-    <div class="section-head">
-      <div>
-        <h2>Contact</h2>
-        <p>For the best mobile experience, the form opens in a new tab.</p>
-      </div>
-      <span class="badge"><i></i> Google Form</span>
-    </div>
-
-    <div class="two">
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Contact form</h3>
-        <p style="margin:0 0 12px; color:var(--muted);">
-          Please use the Google Form to contact me. It takes about 1 minute.
-        </p>
-
-        <div class="btns">
-          <a class="btn primary"
-             href="https://docs.google.com/forms/d/e/1FAIpQLSc674RQH5l7PoDbMe6OfhCGGxtASZ0_QuApAKlUy9XA1OfYnQ/viewform?usp=dialog"
-             target="_blank" rel="noopener">
-            Open the contact form
-          </a>
-          <a class="btn" href="#pricing">Check pricing</a>
-        </div>
-
-        <p style="margin:12px 0 0; color:var(--muted); font-size:13px;">
-          Tip: If the button does not work, copy and open this link:<br>
-          <span style="word-break:break-all;">
-            https://docs.google.com/forms/d/e/1FAIpQLSc674RQH5l7PoDbMe6OfhCGGxtASZ0_QuApAKlUy9XA1OfYnQ/viewform?usp=dialog
-          </span>
-        </p>
-      </div>
-
-      <div class="card pad">
-        <h3 style="margin:0 0 8px;">Studio info</h3>
-        <ul class="list">
-          <li><b>Teacher</b>: Haruka Kikuchi</li>
-          <li><b>Location</b>: Wezembeek-Oppem</li>
-          <li><b>Students</b>: Everyone</li>
-          <li><b>Trial lesson</b>: 60 minutes • €30</li>
-        </ul>
-
-        <h3 style="margin:16px 0 8px;">What to include in your message</h3>
-        <ul class="list">
-          <li>Your current level (beginner / intermediate / advanced)</li>
-          <li>Goals (favorite pieces, exams, concerts, etc.)</li>
-          <li>Preferred schedule</li>
-          <li>Any prior piano experience (if any)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-      <div>© <span id="y"></span> Haruka Kikuchi Piano Studio</div>
-      <div><a href="#home">Back to top</a></div>
-    </div>
+    © <span id="y"></span> Haruka Kikuchi Piano Studio
   </div>
 </footer>
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
-
-  (function(){
-    const btn = document.getElementById('navToggle');
-    const mobileNav = document.getElementById('mobileNav');
-
-    const closeNav = () => {
-      document.body.classList.remove('nav-open');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.setAttribute('aria-label', 'Open menu');
-    };
-    const openNav = () => {
-      document.body.classList.add('nav-open');
-      btn.setAttribute('aria-expanded', 'true');
-      btn.setAttribute('aria-label', 'Close menu');
-    };
-
-    btn.addEventListener('click', () => {
-      const isOpen = document.body.classList.contains('nav-open');
-      isOpen ? closeNav() : openNav();
-    });
-
-    // Close when a mobile link is clicked
-    mobileNav.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') closeNav();
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeNav();
-    });
-  })();
 </script>
 </body>
 </html>
